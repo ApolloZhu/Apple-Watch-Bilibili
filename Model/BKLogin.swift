@@ -7,7 +7,11 @@
 //
 
 import Foundation
-import WatchKit
+#if os(watchOS)
+    import WatchKit
+#else
+    import UIKit
+#endif
 
 public struct BKLogin {
     private init() { }
@@ -16,16 +20,14 @@ public struct BKLogin {
         
     }
     
-    enum BKFetchResult<E> {
+    private enum BKFetchResult<E> {
         case success(E)
         case errored(response: URLResponse?, error: Error?)
     }
     
-    typealias BKFetchResultHandler<E> = (_ result: BKFetchResult<E>) -> Void
+    private typealias BKFetchResultHandler<E> = (_ result: BKFetchResult<E>) -> Void
     
     // MARK: Login URL Fetching
-    
-    
     
     /// Only valid for 3 minutes
     struct LoginURL: Codable {
@@ -37,6 +39,14 @@ public struct BKLogin {
         }
         
         var qrCode: UIImage? {
+            #if os(iOS)
+                let data = url.data(using: .utf8)
+                guard let filter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
+                filter.setValue(data, forKey: "inputMessage")
+                if let ciimage = filter.outputImage {
+                    return UIImage(ciImage: ciimage)
+                }
+            #endif
             return nil
         }
     }
@@ -69,7 +79,7 @@ public struct BKLogin {
         fileprivate(set) var cookie: BKCookie?
     }
     
-    enum LoginState {
+    public enum LoginState {
         case started
         case needsConfirmation
         case succeeded

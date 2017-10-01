@@ -21,14 +21,13 @@ class bilibiliTests: XCTestCase {
     }
     
     func testFetchLoginURL() {
-                    let goal = expectation(description: "Fetch Login URL")
+        let goal = expectation(description: "Fetch Login URL")
         BKLogin.fetchLoginURL { result
             switch result {
             case .errored(let response, let error): print(response, error)
             case .success(let loginURL): print(loginURl.url)
             }
             goal.fulfill()
-
         }
         waitForExpectations(timeout: 20, handler: nil)
     }

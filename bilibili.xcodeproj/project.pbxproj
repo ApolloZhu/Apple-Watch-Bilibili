@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52FBAC451F807C3600F854DA /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBAC441F807C3600F854DA /* QRCode.swift */; };
+		52FBAC461F807C3600F854DA /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBAC441F807C3600F854DA /* QRCode.swift */; };
 		52FD453C1F80278A00656912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD453B1F80278A00656912 /* AppDelegate.swift */; };
 		52FD453E1F80278A00656912 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD453D1F80278A00656912 /* ViewController.swift */; };
 		52FD45411F80278A00656912 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FD453F1F80278A00656912 /* Main.storyboard */; };
@@ -78,6 +80,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		52FBAC441F807C3600F854DA /* QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
 		52FD45381F80278A00656912 /* bilibili.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bilibili.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FD453B1F80278A00656912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FD453D1F80278A00656912 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +195,7 @@
 		52FD45771F8027ED00656912 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				52FBAC441F807C3600F854DA /* QRCode.swift */,
 				52FD45781F80280700656912 /* BKLogin.swift */,
 				52FD457A1F80284800656912 /* BKCookie.swift */,
 			);
@@ -377,6 +381,7 @@
 				52FD458D1F803DE000656912 /* BKLogin.swift in Sources */,
 				52FD453E1F80278A00656912 /* ViewController.swift in Sources */,
 				52FD453C1F80278A00656912 /* AppDelegate.swift in Sources */,
+				52FBAC451F807C3600F854DA /* QRCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FBAC461F807C3600F854DA /* QRCode.swift in Sources */,
 				52FD457E1F802E0100656912 /* BKCookie.swift in Sources */,
 				52FD45631F80278B00656912 /* NotificationController.swift in Sources */,
 				52FD457C1F80284A00656912 /* BKLogin.swift in Sources */,
