@@ -9,7 +9,8 @@
 import Foundation
 #if os(watchOS)
     import WatchKit
-#else
+    import swift_qrcodejs
+#elseif os(iOS) || os(tvOS)
     import UIKit
 #endif
 
@@ -22,7 +23,7 @@ public struct BKLogin {
     
     private enum BKFetchResult<E> {
         case success(E)
-        case errored(response: URLResponse?, error: Error?)
+        case errored(response: URLResponse?, error: Swift.Error?)
     }
     
     private typealias BKFetchResultHandler<E> = (_ result: BKFetchResult<E>) -> Void
@@ -39,15 +40,17 @@ public struct BKLogin {
         }
         
         var qrCode: UIImage? {
-            #if os(iOS)
+            #if os(watchOS)
+                guard let qrcode = QRCode(url) else { return nil }
+                print(qrcode.imageCodes)
+                return qrcode.image
+            #elseif os(iOS) || os(tvOS)
                 let data = url.data(using: .utf8)
                 guard let filter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
                 filter.setValue(data, forKey: "inputMessage")
-                if let ciimage = filter.outputImage {
-                    return UIImage(ciImage: ciimage)
-                }
+                guard let ciimage = filter.outputImage else { return nil }
+                return UIImage(ciImage: ciimage)
             #endif
-            return nil
         }
     }
     

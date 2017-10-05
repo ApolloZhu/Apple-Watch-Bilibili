@@ -8,7 +8,7 @@
 
 - watchOS 程序
   - [ ] 登录
-    - [ ] 生成二维码（[qrcodejs, MIT](https://github.com/davidshimjs/qrcodejs/blob/master/qrcode.js)）
+    - [ ] 生成二维码
   - [ ] 播放
     - [ ] **链接抓取**（[you-get, MIT](https://github.com/soimort/you-get/blob/develop/src/you_get/extractors/bilibili.py)）
     - [ ] 离线缓存

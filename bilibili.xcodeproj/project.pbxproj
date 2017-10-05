@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52FBAC451F807C3600F854DA /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBAC441F807C3600F854DA /* QRCode.swift */; };
-		52FBAC461F807C3600F854DA /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBAC441F807C3600F854DA /* QRCode.swift */; };
+		4697FBC5B3325BE93DEDEDA8 /* Pods_bilibili.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F23B7C014B34538CD2EAF5A /* Pods_bilibili.framework */; };
 		52FD453C1F80278A00656912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD453B1F80278A00656912 /* AppDelegate.swift */; };
 		52FD453E1F80278A00656912 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD453D1F80278A00656912 /* ViewController.swift */; };
 		52FD45411F80278A00656912 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FD453F1F80278A00656912 /* Main.storyboard */; };
@@ -28,6 +27,9 @@
 		52FD45861F803D7800656912 /* bilibiliTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD45851F803D7800656912 /* bilibiliTests.swift */; };
 		52FD458D1F803DE000656912 /* BKLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD45781F80280700656912 /* BKLogin.swift */; };
 		52FD458E1F803DE000656912 /* BKCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD457A1F80284800656912 /* BKCookie.swift */; };
+		5DDCDB704EA6C1D4AB65DAE1 /* Pods_bilibili_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9AC21164B7870FD5A771C95 /* Pods_bilibili_WatchKit_App.framework */; };
+		7A6B49A1CE7F53F4A41D5027 /* Pods_bilibiliTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065A6AF74F84A113616C2336 /* Pods_bilibiliTests.framework */; };
+		B02D66CB33AA3A5F10B7E5BD /* Pods_bilibili_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E35E63C1C0D4CD924D23FA7D /* Pods_bilibili_WatchKit_Extension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +82,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		52FBAC441F807C3600F854DA /* QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
+		065A6AF74F84A113616C2336 /* Pods_bilibiliTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bilibiliTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0840FF6AEF3AB2DBC2BBDCB9 /* Pods-bilibili.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bilibili.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bilibili/Pods-bilibili.debug.xcconfig"; sourceTree = "<group>"; };
+		0991246B0A1E8060663E907F /* Pods-bilibili WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bilibili WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bilibili WatchKit Extension/Pods-bilibili WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		3B90A0F024953D0BAC0E894E /* Pods-bilibili WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bilibili WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-bilibili WatchKit Extension/Pods-bilibili WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		3F23B7C014B34538CD2EAF5A /* Pods_bilibili.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bilibili.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49945AACA0BC9A31146CDF7F /* Pods-bilibiliTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bilibiliTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bilibiliTests/Pods-bilibiliTests.debug.xcconfig"; sourceTree = "<group>"; };
 		52FD45381F80278A00656912 /* bilibili.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bilibili.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FD453B1F80278A00656912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FD453D1F80278A00656912 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +112,12 @@
 		52FD45831F803D7700656912 /* bilibiliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bilibiliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FD45851F803D7800656912 /* bilibiliTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bilibiliTests.swift; sourceTree = "<group>"; };
 		52FD45871F803D7800656912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90BD1667EE107742EE7CE75D /* Pods-bilibili.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bilibili.release.xcconfig"; path = "Pods/Target Support Files/Pods-bilibili/Pods-bilibili.release.xcconfig"; sourceTree = "<group>"; };
+		B915574BCC9B1702F81E509E /* Pods-bilibili WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bilibili WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bilibili WatchKit App/Pods-bilibili WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		B9991468E1CE494A41C27DBB /* Pods-bilibiliTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bilibiliTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bilibiliTests/Pods-bilibiliTests.release.xcconfig"; sourceTree = "<group>"; };
+		CDC891B74F47BDE3CC0372CB /* Pods-bilibili WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bilibili WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-bilibili WatchKit App/Pods-bilibili WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		E35E63C1C0D4CD924D23FA7D /* Pods_bilibili_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bilibili_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9AC21164B7870FD5A771C95 /* Pods_bilibili_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bilibili_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4697FBC5B3325BE93DEDEDA8 /* Pods_bilibili.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B02D66CB33AA3A5F10B7E5BD /* Pods_bilibili_WatchKit_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +141,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A6B49A1CE7F53F4A41D5027 /* Pods_bilibiliTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D036AF2FD0D18BF86396EEF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DDCDB704EA6C1D4AB65DAE1 /* Pods_bilibili_WatchKit_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +165,8 @@
 				52FD455D1F80278B00656912 /* bilibili WatchKit Extension */,
 				52FD45841F803D7800656912 /* bilibiliTests */,
 				52FD45391F80278A00656912 /* Products */,
+				E6624C6D33A47736DEF0D02E /* Pods */,
+				AD641AFB261CBF7F5E7BE1BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,7 +221,6 @@
 		52FD45771F8027ED00656912 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				52FBAC441F807C3600F854DA /* QRCode.swift */,
 				52FD45781F80280700656912 /* BKLogin.swift */,
 				52FD457A1F80284800656912 /* BKCookie.swift */,
 			);
@@ -211,6 +236,32 @@
 			path = bilibiliTests;
 			sourceTree = "<group>";
 		};
+		AD641AFB261CBF7F5E7BE1BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F23B7C014B34538CD2EAF5A /* Pods_bilibili.framework */,
+				E9AC21164B7870FD5A771C95 /* Pods_bilibili_WatchKit_App.framework */,
+				E35E63C1C0D4CD924D23FA7D /* Pods_bilibili_WatchKit_Extension.framework */,
+				065A6AF74F84A113616C2336 /* Pods_bilibiliTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6624C6D33A47736DEF0D02E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0840FF6AEF3AB2DBC2BBDCB9 /* Pods-bilibili.debug.xcconfig */,
+				90BD1667EE107742EE7CE75D /* Pods-bilibili.release.xcconfig */,
+				B915574BCC9B1702F81E509E /* Pods-bilibili WatchKit App.debug.xcconfig */,
+				CDC891B74F47BDE3CC0372CB /* Pods-bilibili WatchKit App.release.xcconfig */,
+				0991246B0A1E8060663E907F /* Pods-bilibili WatchKit Extension.debug.xcconfig */,
+				3B90A0F024953D0BAC0E894E /* Pods-bilibili WatchKit Extension.release.xcconfig */,
+				49945AACA0BC9A31146CDF7F /* Pods-bilibiliTests.debug.xcconfig */,
+				B9991468E1CE494A41C27DBB /* Pods-bilibiliTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,10 +269,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52FD45741F80278B00656912 /* Build configuration list for PBXNativeTarget "bilibili" */;
 			buildPhases = (
+				6F5AD1FB9F56ED0824F26B6F /* [CP] Check Pods Manifest.lock */,
 				52FD45341F80278A00656912 /* Sources */,
 				52FD45351F80278A00656912 /* Frameworks */,
 				52FD45361F80278A00656912 /* Resources */,
 				52FD45731F80278B00656912 /* Embed Watch Content */,
+				48C46E11A50C10A8E7762529 /* [CP] Embed Pods Frameworks */,
+				D7E31F43F2755E06320141FF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,8 +291,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52FD45701F80278B00656912 /* Build configuration list for PBXNativeTarget "bilibili WatchKit App" */;
 			buildPhases = (
+				32DC9767550BD5A3B15FB6E7 /* [CP] Check Pods Manifest.lock */,
 				52FD45481F80278B00656912 /* Resources */,
 				52FD456F1F80278B00656912 /* Embed App Extensions */,
+				D036AF2FD0D18BF86396EEF0 /* Frameworks */,
+				791B4E81C6152CF9C1BF9839 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,9 +311,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52FD456C1F80278B00656912 /* Build configuration list for PBXNativeTarget "bilibili WatchKit Extension" */;
 			buildPhases = (
+				3593C7E749FB7D26D5F81294 /* [CP] Check Pods Manifest.lock */,
 				52FD45551F80278B00656912 /* Sources */,
 				52FD45561F80278B00656912 /* Frameworks */,
 				52FD45571F80278B00656912 /* Resources */,
+				24EEF339B26B19E46E676C42 /* [CP] Embed Pods Frameworks */,
+				5D8FB93B66658B212D1429B2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,9 +331,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52FD458A1F803D7800656912 /* Build configuration list for PBXNativeTarget "bilibiliTests" */;
 			buildPhases = (
+				41EE7C44633B790DBC6F0C18 /* [CP] Check Pods Manifest.lock */,
 				52FD457F1F803D7700656912 /* Sources */,
 				52FD45801F803D7700656912 /* Frameworks */,
 				52FD45811F803D7700656912 /* Resources */,
+				54648882F9A4DE1BA533B36B /* [CP] Embed Pods Frameworks */,
+				6AC9A5F2B56EF350B3DA9FD6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,6 +435,189 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24EEF339B26B19E46E676C42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-bilibili WatchKit Extension/Pods-bilibili WatchKit Extension-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/swift_qrcodejs/swift_qrcodejs.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/swift_qrcodejs.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bilibili WatchKit Extension/Pods-bilibili WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32DC9767550BD5A3B15FB6E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bilibili WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3593C7E749FB7D26D5F81294 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bilibili WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41EE7C44633B790DBC6F0C18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bilibiliTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48C46E11A50C10A8E7762529 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bilibili/Pods-bilibili-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54648882F9A4DE1BA533B36B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bilibiliTests/Pods-bilibiliTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D8FB93B66658B212D1429B2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bilibili WatchKit Extension/Pods-bilibili WatchKit Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AC9A5F2B56EF350B3DA9FD6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bilibiliTests/Pods-bilibiliTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F5AD1FB9F56ED0824F26B6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bilibili-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		791B4E81C6152CF9C1BF9839 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bilibili WatchKit App/Pods-bilibili WatchKit App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7E31F43F2755E06320141FF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bilibili/Pods-bilibili-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		52FD45341F80278A00656912 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -381,7 +627,6 @@
 				52FD458D1F803DE000656912 /* BKLogin.swift in Sources */,
 				52FD453E1F80278A00656912 /* ViewController.swift in Sources */,
 				52FD453C1F80278A00656912 /* AppDelegate.swift in Sources */,
-				52FBAC451F807C3600F854DA /* QRCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +634,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52FBAC461F807C3600F854DA /* QRCode.swift in Sources */,
 				52FD457E1F802E0100656912 /* BKCookie.swift in Sources */,
 				52FD45631F80278B00656912 /* NotificationController.swift in Sources */,
 				52FD457C1F80284A00656912 /* BKLogin.swift in Sources */,
@@ -564,6 +808,7 @@
 		};
 		52FD456D1F80278B00656912 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0991246B0A1E8060663E907F /* Pods-bilibili WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -581,6 +826,7 @@
 		};
 		52FD456E1F80278B00656912 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B90A0F024953D0BAC0E894E /* Pods-bilibili WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -598,6 +844,7 @@
 		};
 		52FD45711F80278B00656912 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B915574BCC9B1702F81E509E /* Pods-bilibili WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -616,6 +863,7 @@
 		};
 		52FD45721F80278B00656912 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDC891B74F47BDE3CC0372CB /* Pods-bilibili WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -634,6 +882,7 @@
 		};
 		52FD45751F80278B00656912 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0840FF6AEF3AB2DBC2BBDCB9 /* Pods-bilibili.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -648,6 +897,7 @@
 		};
 		52FD45761F80278B00656912 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90BD1667EE107742EE7CE75D /* Pods-bilibili.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -662,6 +912,7 @@
 		};
 		52FD458B1F803D7800656912 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49945AACA0BC9A31146CDF7F /* Pods-bilibiliTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -677,6 +928,7 @@
 		};
 		52FD458C1F803D7800656912 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9991468E1CE494A41C27DBB /* Pods-bilibiliTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
