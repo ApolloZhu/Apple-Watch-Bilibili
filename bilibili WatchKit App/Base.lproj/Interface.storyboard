@@ -16,14 +16,14 @@
             </objects>
             <point key="canvasLocation" x="220" y="22"/>
         </scene>
-        <!--Scan-->
+        <!--LoginViewController-->
         <scene sceneID="7PC-57-Qxf">
             <objects>
-                <controller identifier="LoginViewController" title="Scan" fullScreen="YES" id="9V5-Mt-h40" customClass="LoginQRCodeDisplayController" customModule="bilibili_WatchKit_Extension">
+                <controller identifier="LoginViewController" fullScreen="YES" id="9V5-Mt-h40" customClass="LoginQRCodeDisplayController" customModule="bilibili_WatchKit_Extension">
                     <items>
-                        <group width="136" height="136" alignment="center" verticalAlignment="center" contentMode="center" radius="0.0" id="ogH-FD-6rb">
+                        <group width="136" height="136" alignment="center" verticalAlignment="center" backgroundImage="Akari" contentMode="center" radius="0.0" id="ogH-FD-6rb">
                             <items>
-                                <imageView width="136" height="136" alignment="center" verticalAlignment="center" image="Akari" contentMode="scaleAspectFit" id="Y64-9U-fSP"/>
+                                <imageView width="136" height="136" alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="Y64-9U-fSP"/>
                             </items>
                         </group>
                     </items>
