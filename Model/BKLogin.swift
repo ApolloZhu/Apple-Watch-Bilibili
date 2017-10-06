@@ -46,6 +46,7 @@ public struct BKLogin {
             switch result {
             case .success(let url):
                 handleLoginInfo(url)
+
                 timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
                     fetchLoginInfo(oauthKey: url.oauthKey) { result in
                         switch result {
@@ -62,14 +63,19 @@ public struct BKLogin {
                                     handleLoginState(.expired)
                                 default:
                                     handleLoginState(state)
-                                    timer.fire()
+                                    DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: DispatchTime.now() + 3) {
+                                        timer.fire()
+                                    }
                                 }
                             }
                         case .errored(response: let response, error: let error):
-                            fatalError("""
+                            print("""
                                 Response: \(response?.description ?? "No Response")
                                 Error: \(error?.localizedDescription ?? "No Error")
                                 """)
+                            DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: DispatchTime.now() + 3) {
+                                timer.fire()
+                            }
                         }
                     }
                 }
@@ -177,16 +183,14 @@ public struct BKLogin {
         /// Content-Type: application/x-www-form-urlencoded
         request.httpBody = "oauthKey=\(oauthKey)".data(using: .utf8)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if let data = data,
-                let response = response as? HTTPURLResponse,
-                var info = try? JSONDecoder().decode(LoginInfo.self, from: data) {
+            if let response = response as? HTTPURLResponse {
                 if let headerFields = response.allHeaderFields as? [String: String],
-                    let responseURL = response.url {
-                    let cookies = HTTPCookie.cookies(withResponseHeaderFields: headerFields, for: responseURL)
+                    let cookies = headerFields["Set-Cookie"] {
                     info.cookie = BKCookie(cookies: cookies)
-                } else {
-                    assertionFailure("Wrong Logic")
+                    assert(info.cookie != nil, "Wrong Logic")
                 }
+            } else if let data = data,
+                let info = try? JSONDecoder().decode(LoginInfo.self, from: data) {
                 return handler(.success(info))
             } else {
                 return handler(.errored(response: response, error: error))

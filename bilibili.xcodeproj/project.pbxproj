@@ -90,6 +90,9 @@
 		3F23B7C014B34538CD2EAF5A /* Pods_bilibili.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bilibili.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49945AACA0BC9A31146CDF7F /* Pods-bilibiliTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bilibiliTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bilibiliTests/Pods-bilibiliTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5296373F1F86618B0084AA9C /* LoginQRCodeDisplayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginQRCodeDisplayController.swift; sourceTree = "<group>"; };
+		52C50EC81F871CE80009E0CB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		52C50EC91F871CF20009E0CB /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		52C50ECA1F871CFC0009E0CB /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		52FD45381F80278A00656912 /* bilibili.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bilibili.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FD453B1F80278A00656912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FD453D1F80278A00656912 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +164,9 @@
 		52FD452F1F80278900656912 = {
 			isa = PBXGroup;
 			children = (
+				52C50EC81F871CE80009E0CB /* README.md */,
+				52C50EC91F871CF20009E0CB /* LICENSE */,
+				52C50ECA1F871CFC0009E0CB /* Podfile */,
 				52FD45771F8027ED00656912 /* Model */,
 				52FD453A1F80278A00656912 /* bilibili */,
 				52FD454E1F80278B00656912 /* bilibili WatchKit App */,

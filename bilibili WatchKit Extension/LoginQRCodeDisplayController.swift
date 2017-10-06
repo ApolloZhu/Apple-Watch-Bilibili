@@ -12,25 +12,19 @@ import swift_qrcodejs
 
 class LoginQRCodeDisplayController: WKInterfaceController {
     public static let name = "LoginViewController"
-    
-    @IBOutlet private var image: WKInterfaceImage!
+    @IBOutlet var group: WKInterfaceGroup?
+    @IBOutlet var checkMark: WKInterfaceImage?
 
     override func didAppear() {
         super.didAppear()
         BKLogin.login(handleLoginInfo: { info in
             DispatchQueue.global(qos: .userInteractive).async {
-                let device = WKInterfaceDevice.current()
-                let scale: CGFloat = 1
-                var size = device.screenBounds.size
-                size.width *= scale
-                size.height *= scale
-                // let scale = device.screenScale
-                guard let qrcode = QRCode(info.url,
-                                          size: size),
-                    let image = qrcode.image
+                guard let qrcode = QRCode(info.url, size: CGSize(width: 53, height: 53), colorDark: 0xFFFFFF, colorLight: 0),
+                    let image = qrcode.image,
+                    let data = UIImagePNGRepresentation(image)
                     else { return }
                 DispatchQueue.main.async { [weak self] in
-                    self?.image.setImage(image)
+                    self?.checkMark?.setImageData(data)
                 }
             }
         }, handleLoginState: { state in
@@ -38,7 +32,7 @@ class LoginQRCodeDisplayController: WKInterfaceController {
                 switch state {
                 case .succeeded, .expired: self?.dismiss()
                 case .started: print("State: \(state)")
-                case .needsConfirmation: self?.image.setImage(#imageLiteral(resourceName: "Check Mark"))
+                case .needsConfirmation: self?.checkMark?.setImageNamed("Check Mark")
                 default: fatalError("State: \(state)")
                 }
             }

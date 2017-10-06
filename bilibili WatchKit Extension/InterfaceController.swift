@@ -14,12 +14,12 @@ class InterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         
         // Configure interface objects here.
-        presentController(withName: LoginQRCodeDisplayController.name, context: context)
     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        presentController(withName: LoginQRCodeDisplayController.name, context: nil)
     }
     
     override func didDeactivate() {

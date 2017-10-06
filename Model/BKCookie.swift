@@ -41,18 +41,21 @@ public struct BKCookie: Codable {
         sessionData = SESSDATA
     }
     
-    public init?(cookies: [HTTPCookie]) {
-        var mid: Int?, md5: String?, session: String?
-        for cookie in cookies {
-            switch cookie.name {
-            case CodingKeys.mid.rawValue: mid = Int(cookie.value)
-            case CodingKeys.md5Sum.rawValue: md5 = cookie.value
-            case CodingKeys.sessionData.rawValue: session = cookie.value
-            default: break
-            }
+    public init?(cookies: String) {
+        var dict = [String:String]()
+        for part in cookies
+            .split(separator: ";") {
+                let parts = part
+                    .split(separator: "=")
+                    .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+                if parts.count == 2 { dict[parts[0]] = parts[1] }
         }
-        guard mid != nil && md5 != nil && session != nil else { return nil }
-        self.init(DedeUserID: mid!, DedeUserID__ckMd5: md5!, SESSDATA: session!)
+        guard let str = dict[CodingKeys.mid.stringValue],
+            let mid = Int(str),
+            let sum = dict[CodingKeys.md5Sum.stringValue],
+            let data = dict[CodingKeys.sessionData.stringValue]
+            else { return nil }
+        self.init(DedeUserID: mid, DedeUserID__ckMd5: sum, SESSDATA: data)
     }
     
     public var valueForHeaderFieldCookie: String {
