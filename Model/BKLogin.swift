@@ -23,59 +23,55 @@ public struct BKLogin {
             _cookie = newValue
         }
     }
-
+    
     // Just to make sure no one ever gets a
     private init() { }
-
+    
     public static func logout() {
         BKLogin.cookie = nil
     }
-
+    
     public static func login(withCookie cookie: BKCookie) {
         BKLogin.cookie = cookie
     }
-
+    
     private static var timer: Timer? {
         willSet {
             timer?.invalidate()
         }
     }
-
+    
     public static func login(handleLoginInfo: @escaping (LoginURL) -> Void, handleLoginState: @escaping (LoginState) -> Void) {
         fetchLoginURL { result in
             switch result {
             case .success(let url):
                 handleLoginInfo(url)
-
+                
                 timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+                    func heartbeat() {
+                        DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: DispatchTime.now() + 3) {
+                            timer.fire()
+                        }
+                    }
                     fetchLoginInfo(oauthKey: url.oauthKey) { result in
                         switch result {
-                        case .success(let info):
-                            if let cookie = info.cookie {
+                        case .success(let state):
+                            switch state {
+                            case .succeeded(cookie: let cookie):
                                 BKLogin.timer = nil
                                 login(withCookie: cookie)
-                                handleLoginState(.succeeded)
-                            } else {
-                                let state = LoginState.of(info)
-                                switch state {
-                                case .expired:
-                                    BKLogin.timer = nil
-                                    handleLoginState(.expired)
-                                default:
-                                    handleLoginState(state)
-                                    DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: DispatchTime.now() + 3) {
-                                        timer.fire()
-                                    }
-                                }
+                            case .expired:
+                                BKLogin.timer = nil
+                            default:
+                                heartbeat()
                             }
+                            handleLoginState(state)
                         case .errored(response: let response, error: let error):
                             print("""
                                 Response: \(response?.description ?? "No Response")
                                 Error: \(error?.localizedDescription ?? "No Error")
                                 """)
-                            DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: DispatchTime.now() + 3) {
-                                timer.fire()
-                            }
+                            heartbeat()
                         }
                     }
                 }
@@ -106,7 +102,7 @@ public struct BKLogin {
         struct Wrapper: Codable {
             let data: LoginURL
         }
-
+        
         /*
          func qrCode(inputCorrectionLevel: QRErrorCorrectLevel) -> UIImage? {
          let data = url.data(using: .utf8)
@@ -134,8 +130,9 @@ public struct BKLogin {
     
     // MARK: Login Info Fetching
     
-    struct LoginInfo: Codable {
+    fileprivate struct LoginInfo: Codable {
         /// If has login info.
+        /// Set-Cookie if true.
         let status: Bool
         /// Login process status.
         /// -4: not scaned.
@@ -145,27 +142,22 @@ public struct BKLogin {
         let data: Int
         /// Login process status explaination.
         let message: String
-        /// Attached if status is true
-        fileprivate(set) var cookie: BKCookie?
     }
     
     public enum LoginState {
         case started
         case needsConfirmation
-        case succeeded
+        case succeeded(cookie: BKCookie)
         case expired
         case missingOAuthKey
-        case unknown(Int)
-        static func of(_ info: LoginInfo) -> LoginState {
-            if info.status || info.cookie != nil {
-                return .succeeded
-            }
+        case unknown(status: Int)
+        fileprivate static func of(_ info: LoginInfo) -> LoginState {
             switch info.data {
             case -1: return .missingOAuthKey
             case -2: return .expired
             case -4: return .started
             case -5: return .needsConfirmation
-            default: return .unknown(info.data)
+            default: return .unknown(status: info.data)
             }
         }
     }
@@ -177,7 +169,7 @@ public struct BKLogin {
     /// - Parameters:
     ///   - oauthKey: <#oauthKey description#>
     ///   - handler: <#handler description#>
-    private static func fetchLoginInfo(oauthKey: String, handler: @escaping BKFetchResultHandler<LoginInfo>) {
+    private static func fetchLoginInfo(oauthKey: String, handler: @escaping BKFetchResultHandler<LoginState>) {
         let url = URL(string: "https://passport.bilibili.com/qrcode/getLoginInfo")!
         var request = postRequest(to: url)
         /// Content-Type: application/x-www-form-urlencoded
@@ -186,20 +178,20 @@ public struct BKLogin {
             if let response = response as? HTTPURLResponse {
                 if let headerFields = response.allHeaderFields as? [String: String],
                     let cookies = headerFields["Set-Cookie"] {
-                    info.cookie = BKCookie(cookies: cookies)
-                    assert(info.cookie != nil, "Wrong Logic")
+                    guard let cookie = BKCookie(cookies: cookies) else { fatalError("Logic Error") }
+                    return handler(.success(.succeeded(cookie: cookie)))
                 }
             } else if let data = data,
                 let info = try? JSONDecoder().decode(LoginInfo.self, from: data) {
-                return handler(.success(info))
+                return handler(.success(LoginState.of(info)))
             } else {
                 return handler(.errored(response: response, error: error))
             }
         }
         task.resume()
     }
-
-
+    
+    
     private static func postRequest(to url: URL) -> URLRequest {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -209,5 +201,5 @@ public struct BKLogin {
         }
         return request
     }
-
+    
 }
