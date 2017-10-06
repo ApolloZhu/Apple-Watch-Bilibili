@@ -51,7 +51,7 @@ public struct BKCookie: Codable {
             default: break
             }
         }
-        guard mid != nil && md5 != nil && session != nil else { assertionFailure("Wrong Logic");return nil }
+        guard mid != nil && md5 != nil && session != nil else { return nil }
         self.init(DedeUserID: mid!, DedeUserID__ckMd5: md5!, SESSDATA: session!)
     }
     
