@@ -8,14 +8,28 @@
 
 - watchOS 程序
   - [ ] 登录
-    - [ ] 生成二维码
+    - [x] 生成二维码
+    - [ ] 存储 Cookie
   - [ ] 播放
     - [ ] **链接抓取**（[you-get, MIT](https://github.com/soimort/you-get/blob/develop/src/you_get/extractors/bilibili.py)）
+    - [ ] 历史记录
     - [ ] 离线缓存
+  - [ ] 番剧
+  - [ ] 纯音乐
+  - [ ] 专栏
+  - [ ] 稍后再看
+  - [ ] 更新
+    - [ ] 视频
+    - [ ] 音乐
+    - [ ] 动态
+    - [ ] 文章
+  - [ ] 推荐
+    - [ ] 不感兴趣
+  - [ ] 启动图
 - watchOS 表盘
   - [ ] ?
 - watchOS 通知
-  - [ ] ?
+  - [ ] 更新
 - iOS 主程序
   - [ ] 引导登录
 
