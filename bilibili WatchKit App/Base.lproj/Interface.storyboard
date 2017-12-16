@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13196" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Bili-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="bilibili_WatchKit_App" customModuleProvider="target"/>
+                <controller identifier="MainViewController" title="Bili" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="bilibili_WatchKit_App" customModuleProvider="target">
+                    <connections>
+                        <segue destination="4XW-15-rED" kind="relationship" relationship="nextPage" id="x8Z-35-Jlr"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="22"/>
         </scene>
         <!--LoginViewController-->
         <scene sceneID="7PC-57-Qxf">
             <objects>
-                <controller identifier="LoginViewController" fullScreen="YES" id="9V5-Mt-h40" customClass="LoginQRCodeDisplayController" customModule="bilibili_WatchKit_Extension">
+                <controller identifier="LoginViewController" contentMode="scaleAspectFill" fullScreen="YES" id="9V5-Mt-h40" customClass="LoginQRCodeDisplayController" customModule="bilibili_WatchKit_Extension">
                     <items>
-                        <group width="136" height="136" alignment="center" verticalAlignment="center" backgroundImage="Akari" contentMode="center" radius="0.0" id="ogH-FD-6rb">
-                            <items>
-                                <imageView width="136" height="136" alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="Y64-9U-fSP"/>
-                            </items>
-                        </group>
+                        <imageView width="1" height="1" alignment="center" verticalAlignment="center" semanticContentAttribute="playback" image="Akari" contentMode="scaleAspectFit" id="riE-s6-95A"/>
+                        <imageView width="1" height="1" alignment="center" verticalAlignment="center" hidden="YES" contentMode="scaleAspectFit" initiallyAnimated="NO" animationDuration="1300" id="Wwc-Eu-kfW"/>
                     </items>
                     <connections>
-                        <outlet property="checkMark" destination="Y64-9U-fSP" id="gqI-wk-XEG"/>
-                        <outlet property="group" destination="ogH-FD-6rb" id="E66-GF-tde"/>
+                        <outlet property="imageView" destination="riE-s6-95A" id="mKp-UF-fnX"/>
+                        <outlet property="waitingIndicator" destination="Wwc-Eu-kfW" id="j4x-we-Yce"/>
+                        <segue destination="AgC-eL-Hgc" kind="relationship" relationship="nextPage" id="63d-Q9-25Y"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="504" y="-177"/>
+            <point key="canvasLocation" x="-19" y="22"/>
         </scene>
         <!--ImageLabelTableViewController-->
         <scene sceneID="XMT-O0-6P8">
@@ -55,7 +57,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="504" y="308"/>
+            <point key="canvasLocation" x="454" y="22"/>
         </scene>
         <!--VideoPlayController-->
         <scene sceneID="Fta-sI-Y32">
@@ -66,7 +68,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="792" y="308"/>
+            <point key="canvasLocation" x="686" y="22"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

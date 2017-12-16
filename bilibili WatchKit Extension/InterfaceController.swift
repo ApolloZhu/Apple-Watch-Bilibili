@@ -8,8 +8,10 @@
 
 import WatchKit
 import Foundation
+import BilibiliKit
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, Named {
+    public static let name = "MainViewController"
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -19,7 +21,9 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        presentController(withName: LoginQRCodeDisplayController.name, context: nil)
+        if !BKSession.shared.isLoggedIn {
+            WKInterfaceController.reloadRootPageControllers(withNames: [LoginQRCodeDisplayController.name], contexts: nil, orientation: .horizontal, pageIndex: 0)
+        }
     }
     
     override func didDeactivate() {

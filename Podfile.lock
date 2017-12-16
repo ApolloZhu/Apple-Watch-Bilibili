@@ -1,16 +1,21 @@
 PODS:
+  - BilibiliKit (0.1)
   - swift_qrcodejs (0.0.1)
 
 DEPENDENCIES:
-  - swift_qrcodejs (from `~/Documents/Git-Repo/swift_qrcodejs`)
+  - BilibiliKit (from `../BilibiliKit`)
+  - swift_qrcodejs (from `../swift_qrcodejs`)
 
 EXTERNAL SOURCES:
+  BilibiliKit:
+    :path: ../BilibiliKit
   swift_qrcodejs:
-    :path: ~/Documents/Git-Repo/swift_qrcodejs
+    :path: ../swift_qrcodejs
 
 SPEC CHECKSUMS:
+  BilibiliKit: 1cd5d6ba6172a092216022ed8c58af103e5922a2
   swift_qrcodejs: bb2347739535563722e1648fd47b6435e31035e6
 
-PODFILE CHECKSUM: 64a3aab73c303a8ca48089701766e892d46de8d0
+PODFILE CHECKSUM: f38a733e164af23e8aa09cd23d0e0ced0b23ab2b
 
 COCOAPODS: 1.3.1

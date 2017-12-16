@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4697FBC5B3325BE93DEDEDA8 /* Pods_bilibili.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F23B7C014B34538CD2EAF5A /* Pods_bilibili.framework */; };
 		529637401F86618B0084AA9C /* LoginQRCodeDisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296373F1F86618B0084AA9C /* LoginQRCodeDisplayController.swift */; };
+		52DE07561FE4F20700F4D6F6 /* Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DE07551FE4F20700F4D6F6 /* Named.swift */; };
+		52DE07581FE509B100F4D6F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DE07571FE509B100F4D6F6 /* Assets.xcassets */; };
 		52FD453C1F80278A00656912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD453B1F80278A00656912 /* AppDelegate.swift */; };
 		52FD453E1F80278A00656912 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD453D1F80278A00656912 /* ViewController.swift */; };
 		52FD45411F80278A00656912 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FD453F1F80278A00656912 /* Main.storyboard */; };
@@ -16,18 +18,13 @@
 		52FD45461F80278A00656912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FD45441F80278A00656912 /* LaunchScreen.storyboard */; };
 		52FD454B1F80278B00656912 /* bilibili WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 52FD454A1F80278B00656912 /* bilibili WatchKit App.app */; };
 		52FD45511F80278B00656912 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FD454F1F80278B00656912 /* Interface.storyboard */; };
-		52FD45531F80278B00656912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FD45521F80278B00656912 /* Assets.xcassets */; };
 		52FD455A1F80278B00656912 /* bilibili WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52FD45591F80278B00656912 /* bilibili WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		52FD455F1F80278B00656912 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD455E1F80278B00656912 /* InterfaceController.swift */; };
 		52FD45611F80278B00656912 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD45601F80278B00656912 /* ExtensionDelegate.swift */; };
 		52FD45631F80278B00656912 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD45621F80278B00656912 /* NotificationController.swift */; };
 		52FD45651F80278B00656912 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD45641F80278B00656912 /* ComplicationController.swift */; };
 		52FD45671F80278B00656912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FD45661F80278B00656912 /* Assets.xcassets */; };
-		52FD457C1F80284A00656912 /* BKLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD45781F80280700656912 /* BKLogin.swift */; };
-		52FD457E1F802E0100656912 /* BKCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD457A1F80284800656912 /* BKCookie.swift */; };
 		52FD45861F803D7800656912 /* bilibiliTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD45851F803D7800656912 /* bilibiliTests.swift */; };
-		52FD458D1F803DE000656912 /* BKLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD45781F80280700656912 /* BKLogin.swift */; };
-		52FD458E1F803DE000656912 /* BKCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD457A1F80284800656912 /* BKCookie.swift */; };
 		5DDCDB704EA6C1D4AB65DAE1 /* Pods_bilibili_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9AC21164B7870FD5A771C95 /* Pods_bilibili_WatchKit_App.framework */; };
 		7A6B49A1CE7F53F4A41D5027 /* Pods_bilibiliTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065A6AF74F84A113616C2336 /* Pods_bilibiliTests.framework */; };
 		B02D66CB33AA3A5F10B7E5BD /* Pods_bilibili_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E35E63C1C0D4CD924D23FA7D /* Pods_bilibili_WatchKit_Extension.framework */; };
@@ -93,6 +90,8 @@
 		52C50EC81F871CE80009E0CB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		52C50EC91F871CF20009E0CB /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		52C50ECA1F871CFC0009E0CB /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		52DE07551FE4F20700F4D6F6 /* Named.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Named.swift; sourceTree = "<group>"; };
+		52DE07571FE509B100F4D6F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52FD45381F80278A00656912 /* bilibili.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bilibili.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FD453B1F80278A00656912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FD453D1F80278A00656912 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,7 +101,6 @@
 		52FD45471F80278A00656912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52FD454A1F80278B00656912 /* bilibili WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bilibili WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FD45501F80278B00656912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		52FD45521F80278B00656912 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52FD45541F80278B00656912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52FD45591F80278B00656912 /* bilibili WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "bilibili WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FD455E1F80278B00656912 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
@@ -112,8 +110,6 @@
 		52FD45661F80278B00656912 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52FD45681F80278B00656912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52FD45691F80278B00656912 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		52FD45781F80280700656912 /* BKLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKLogin.swift; sourceTree = "<group>"; };
-		52FD457A1F80284800656912 /* BKCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKCookie.swift; sourceTree = "<group>"; };
 		52FD45831F803D7700656912 /* bilibiliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bilibiliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FD45851F803D7800656912 /* bilibiliTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bilibiliTests.swift; sourceTree = "<group>"; };
 		52FD45871F803D7800656912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -167,7 +163,6 @@
 				52C50EC81F871CE80009E0CB /* README.md */,
 				52C50EC91F871CF20009E0CB /* LICENSE */,
 				52C50ECA1F871CFC0009E0CB /* Podfile */,
-				52FD45771F8027ED00656912 /* Model */,
 				52FD453A1F80278A00656912 /* bilibili */,
 				52FD454E1F80278B00656912 /* bilibili WatchKit App */,
 				52FD455D1F80278B00656912 /* bilibili WatchKit Extension */,
@@ -205,8 +200,8 @@
 		52FD454E1F80278B00656912 /* bilibili WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				52DE07571FE509B100F4D6F6 /* Assets.xcassets */,
 				52FD454F1F80278B00656912 /* Interface.storyboard */,
-				52FD45521F80278B00656912 /* Assets.xcassets */,
 				52FD45541F80278B00656912 /* Info.plist */,
 			);
 			path = "bilibili WatchKit App";
@@ -215,6 +210,7 @@
 		52FD455D1F80278B00656912 /* bilibili WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				52DE07551FE4F20700F4D6F6 /* Named.swift */,
 				5296373F1F86618B0084AA9C /* LoginQRCodeDisplayController.swift */,
 				52FD455E1F80278B00656912 /* InterfaceController.swift */,
 				52FD45601F80278B00656912 /* ExtensionDelegate.swift */,
@@ -225,15 +221,6 @@
 				52FD45691F80278B00656912 /* PushNotificationPayload.apns */,
 			);
 			path = "bilibili WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		52FD45771F8027ED00656912 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				52FD45781F80280700656912 /* BKLogin.swift */,
-				52FD457A1F80284800656912 /* BKCookie.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		52FD45841F803D7800656912 /* bilibiliTests */ = {
@@ -422,7 +409,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52FD45531F80278B00656912 /* Assets.xcassets in Resources */,
+				52DE07581FE509B100F4D6F6 /* Assets.xcassets in Resources */,
 				52FD45511F80278B00656912 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,10 +439,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-bilibili WatchKit Extension/Pods-bilibili WatchKit Extension-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BilibiliKit-watchOS/BilibiliKit.framework",
 				"${BUILT_PRODUCTS_DIR}/swift_qrcodejs-watchOS/swift_qrcodejs.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BilibiliKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/swift_qrcodejs.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,10 +513,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-bilibili/Pods-bilibili-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BilibiliKit-iOS/BilibiliKit.framework",
 				"${BUILT_PRODUCTS_DIR}/swift_qrcodejs-iOS/swift_qrcodejs.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BilibiliKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/swift_qrcodejs.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,8 +626,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52FD458E1F803DE000656912 /* BKCookie.swift in Sources */,
-				52FD458D1F803DE000656912 /* BKLogin.swift in Sources */,
 				52FD453E1F80278A00656912 /* ViewController.swift in Sources */,
 				52FD453C1F80278A00656912 /* AppDelegate.swift in Sources */,
 			);
@@ -646,10 +635,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52FD457E1F802E0100656912 /* BKCookie.swift in Sources */,
 				529637401F86618B0084AA9C /* LoginQRCodeDisplayController.swift in Sources */,
+				52DE07561FE4F20700F4D6F6 /* Named.swift in Sources */,
 				52FD45631F80278B00656912 /* NotificationController.swift in Sources */,
-				52FD457C1F80284A00656912 /* BKLogin.swift in Sources */,
 				52FD45651F80278B00656912 /* ComplicationController.swift in Sources */,
 				52FD45611F80278B00656912 /* ExtensionDelegate.swift in Sources */,
 				52FD455F1F80278B00656912 /* InterfaceController.swift in Sources */,
@@ -825,6 +813,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KZ7D8X3PRK;
 				INFOPLIST_FILE = "bilibili WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.apollozhu.bilibili.watchkitapp.watchkitextension;
@@ -843,6 +832,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KZ7D8X3PRK;
 				INFOPLIST_FILE = "bilibili WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.apollozhu.bilibili.watchkitapp.watchkitextension;
@@ -862,6 +852,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KZ7D8X3PRK;
 				IBSC_MODULE = bilibili_WatchKit_Extension;
 				INFOPLIST_FILE = "bilibili WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.apollozhu.bilibili.watchkitapp;
@@ -881,6 +872,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KZ7D8X3PRK;
 				IBSC_MODULE = bilibili_WatchKit_Extension;
 				INFOPLIST_FILE = "bilibili WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.apollozhu.bilibili.watchkitapp;
@@ -899,6 +891,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KZ7D8X3PRK;
 				INFOPLIST_FILE = bilibili/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.apollozhu.bilibili;
@@ -914,6 +907,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KZ7D8X3PRK;
 				INFOPLIST_FILE = bilibili/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.apollozhu.bilibili;

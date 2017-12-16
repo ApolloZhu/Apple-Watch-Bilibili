@@ -6,7 +6,8 @@ target 'bilibili' do
   use_frameworks!
 
   # Pods for bilibili
-  pod 'swift_qrcodejs', :path => '~/Documents/Git-Repo/swift_qrcodejs'
+  pod 'swift_qrcodejs', :path => '../swift_qrcodejs'
+  pod 'BilibiliKit', :path => '../BilibiliKit'
   # pod 'swift_qrcodejs', :git => "https://github.com/ApolloZhu/swift_qrcodejs.git"
 
   target 'bilibiliTests' do
@@ -29,5 +30,7 @@ target 'bilibili WatchKit Extension' do
   use_frameworks!
 
   # Pods for bilibili WatchKit Extension
-  pod 'swift_qrcodejs', :path => '~/Documents/Git-Repo/swift_qrcodejs'
+  pod 'swift_qrcodejs', :path => '../swift_qrcodejs'
+  pod 'BilibiliKit', :path => '../BilibiliKit'
+
 end
