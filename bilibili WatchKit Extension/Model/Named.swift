@@ -6,7 +6,7 @@
 //  Copyright © 2017 Apollo Zhu. All rights reserved.
 //
 
-import Foundation
+import WatchKit
 
 protocol Named {
     static var name: String { get }

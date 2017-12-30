@@ -11,12 +11,19 @@ import WatchKit
 import swift_qrcodejs
 import BilibiliKit
 
+extension WKInterfaceController {
+    func presentLoginControllerIfNeeded() {
+        if BKSession.shared.isLoggedIn { return }
+        WKInterfaceController.reloadRootPageControllers(withNames: [LoginQRCodeDisplayController.name], contexts: nil, orientation: .horizontal, pageIndex: 0)
+    }
+}
+
 class LoginQRCodeDisplayController: WKInterfaceController, Named {
     public static let name = "LoginViewController"
     @IBOutlet private var imageView: WKInterfaceImage!
     @IBOutlet private var waitingIndicator: WKInterfaceImage!
 
-    public func login() {
+    private func login() {
         imageView?.setImage(nil)
         becomeCurrentPage()
         BKLoginHelper.default.login(handleLoginInfo: handleLoginInfo,
@@ -63,9 +70,9 @@ class LoginQRCodeDisplayController: WKInterfaceController, Named {
             }
         }
     }
-
-    func loggedIn() {
-        WKInterfaceController.reloadRootPageControllers(withNames: [InterfaceController.name], contexts: nil, orientation: .horizontal, pageIndex: 0)
+    
+    private func loggedIn() {
+        presentNormalInterface()
     }
 
     override func willActivate() {

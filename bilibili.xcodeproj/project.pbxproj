@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		4697FBC5B3325BE93DEDEDA8 /* Pods_bilibili.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F23B7C014B34538CD2EAF5A /* Pods_bilibili.framework */; };
 		529637401F86618B0084AA9C /* LoginQRCodeDisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296373F1F86618B0084AA9C /* LoginQRCodeDisplayController.swift */; };
+		529AD4B51FF75F290088985B /* BKAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529AD4B41FF75F290088985B /* BKAccount.swift */; };
 		52DE07561FE4F20700F4D6F6 /* Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DE07551FE4F20700F4D6F6 /* Named.swift */; };
 		52DE07581FE509B100F4D6F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DE07571FE509B100F4D6F6 /* Assets.xcassets */; };
+		52EE51861FF74E8C00BA7C5E /* AccountInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE51851FF74E8C00BA7C5E /* AccountInterfaceController.swift */; };
 		52FD453C1F80278A00656912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD453B1F80278A00656912 /* AppDelegate.swift */; };
 		52FD453E1F80278A00656912 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD453D1F80278A00656912 /* ViewController.swift */; };
 		52FD45411F80278A00656912 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FD453F1F80278A00656912 /* Main.storyboard */; };
@@ -87,11 +89,14 @@
 		3F23B7C014B34538CD2EAF5A /* Pods_bilibili.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bilibili.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49945AACA0BC9A31146CDF7F /* Pods-bilibiliTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bilibiliTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bilibiliTests/Pods-bilibiliTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5296373F1F86618B0084AA9C /* LoginQRCodeDisplayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginQRCodeDisplayController.swift; sourceTree = "<group>"; };
+		529AD4B41FF75F290088985B /* BKAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKAccount.swift; sourceTree = "<group>"; };
+		529AD4B61FF8104C0088985B /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		52C50EC81F871CE80009E0CB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		52C50EC91F871CF20009E0CB /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		52C50ECA1F871CFC0009E0CB /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		52C50ECA1F871CFC0009E0CB /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		52DE07551FE4F20700F4D6F6 /* Named.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Named.swift; sourceTree = "<group>"; };
 		52DE07571FE509B100F4D6F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52EE51851FF74E8C00BA7C5E /* AccountInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInterfaceController.swift; sourceTree = "<group>"; };
 		52FD45381F80278A00656912 /* bilibili.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bilibili.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FD453B1F80278A00656912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FD453D1F80278A00656912 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,10 +162,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52EE51871FF754FA00BA7C5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52DE07551FE4F20700F4D6F6 /* Named.swift */,
+				529AD4B41FF75F290088985B /* BKAccount.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52EE51881FF7550600BA7C5E /* Later */ = {
+			isa = PBXGroup;
+			children = (
+				52FD45601F80278B00656912 /* ExtensionDelegate.swift */,
+				52FD45621F80278B00656912 /* NotificationController.swift */,
+				52FD45641F80278B00656912 /* ComplicationController.swift */,
+			);
+			path = Later;
+			sourceTree = "<group>";
+		};
 		52FD452F1F80278900656912 = {
 			isa = PBXGroup;
 			children = (
 				52C50EC81F871CE80009E0CB /* README.md */,
+				529AD4B61FF8104C0088985B /* CHANGELOG.md */,
 				52C50EC91F871CF20009E0CB /* LICENSE */,
 				52C50ECA1F871CFC0009E0CB /* Podfile */,
 				52FD453A1F80278A00656912 /* bilibili */,
@@ -210,12 +235,11 @@
 		52FD455D1F80278B00656912 /* bilibili WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				52DE07551FE4F20700F4D6F6 /* Named.swift */,
+				52EE51871FF754FA00BA7C5E /* Model */,
 				5296373F1F86618B0084AA9C /* LoginQRCodeDisplayController.swift */,
+				52EE51851FF74E8C00BA7C5E /* AccountInterfaceController.swift */,
 				52FD455E1F80278B00656912 /* InterfaceController.swift */,
-				52FD45601F80278B00656912 /* ExtensionDelegate.swift */,
-				52FD45621F80278B00656912 /* NotificationController.swift */,
-				52FD45641F80278B00656912 /* ComplicationController.swift */,
+				52EE51881FF7550600BA7C5E /* Later */,
 				52FD45661F80278B00656912 /* Assets.xcassets */,
 				52FD45681F80278B00656912 /* Info.plist */,
 				52FD45691F80278B00656912 /* PushNotificationPayload.apns */,
@@ -639,7 +663,9 @@
 				52DE07561FE4F20700F4D6F6 /* Named.swift in Sources */,
 				52FD45631F80278B00656912 /* NotificationController.swift in Sources */,
 				52FD45651F80278B00656912 /* ComplicationController.swift in Sources */,
+				529AD4B51FF75F290088985B /* BKAccount.swift in Sources */,
 				52FD45611F80278B00656912 /* ExtensionDelegate.swift in Sources */,
+				52EE51861FF74E8C00BA7C5E /* AccountInterfaceController.swift in Sources */,
 				52FD455F1F80278B00656912 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

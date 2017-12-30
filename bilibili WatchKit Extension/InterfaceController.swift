@@ -10,6 +10,12 @@ import WatchKit
 import Foundation
 import BilibiliKit
 
+extension WKInterfaceController {
+    func presentNormalInterface() {
+        WKInterfaceController.reloadRootPageControllers(withNames: [AccountInterfaceController.name], contexts: nil, orientation: .horizontal, pageIndex: 0)
+    }
+}
+
 class InterfaceController: WKInterfaceController, Named {
     public static let name = "MainViewController"
     override func awake(withContext context: Any?) {
@@ -21,14 +27,13 @@ class InterfaceController: WKInterfaceController, Named {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        if !BKSession.shared.isLoggedIn {
-            WKInterfaceController.reloadRootPageControllers(withNames: [LoginQRCodeDisplayController.name], contexts: nil, orientation: .horizontal, pageIndex: 0)
-        }
+        presentLoginControllerIfNeeded()
+        
     }
     
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
 }

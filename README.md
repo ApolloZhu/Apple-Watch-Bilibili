@@ -2,18 +2,18 @@
 
 > 你 ***腕间*** 跃动的电光，是我此生不灭的信仰
 
+## 开发中
+
 [报 Bug/功能建议/吐槽 传送门](https://github.com/ApolloZhu/Apple-Watch-Bilibili/issues/new)
 
 ## 功能计划
 
 - watchOS 程序
-  - [ ] 登录
-    - [x] 生成二维码
-    - [ ] 存储 Cookie
   - [ ] 播放
     - [ ] **链接抓取**（[you-get, MIT](https://github.com/soimort/you-get/blob/develop/src/you_get/extractors/bilibili.py)）
     - [ ] 历史记录
-    - [ ] 离线缓存
+    - [ ] 离线缓存？
+  - [ ] 图标
   - [ ] 番剧
   - [ ] 纯音乐
   - [ ] 专栏

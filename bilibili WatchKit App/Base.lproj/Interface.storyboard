@@ -31,11 +31,10 @@
                     <connections>
                         <outlet property="imageView" destination="riE-s6-95A" id="mKp-UF-fnX"/>
                         <outlet property="waitingIndicator" destination="Wwc-Eu-kfW" id="j4x-we-Yce"/>
-                        <segue destination="AgC-eL-Hgc" kind="relationship" relationship="nextPage" id="63d-Q9-25Y"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-19" y="22"/>
+            <point key="canvasLocation" x="220" y="357"/>
         </scene>
         <!--ImageLabelTableViewController-->
         <scene sceneID="XMT-O0-6P8">
@@ -58,6 +57,63 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="454" y="22"/>
+        </scene>
+        <!--AccountController-->
+        <scene sceneID="hiL-DV-v4P">
+            <objects>
+                <controller identifier="AccountController" id="JEe-Xz-GDC" customClass="AccountInterfaceController" customModule="bilibili_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Logout" id="FIB-3b-d7i">
+                            <color key="titleColor" red="0.98431372549999996" green="0.44705882349999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="logout" destination="JEe-Xz-GDC" id="Dma-hO-dFr"/>
+                            </connections>
+                        </button>
+                        <group width="1" height="0.29999999999999999" alignment="left" spacing="4" id="X3J-uX-dqM">
+                            <items>
+                                <imageView width="0.29999999999999999" height="1" alignment="left" image="Akari" contentMode="scaleAspectFit" id="Ffj-ZC-oc7"/>
+                                <group width="0.69999999999999996" alignment="left" layout="vertical" id="3YP-lu-m7t">
+                                    <items>
+                                        <label width="1" height="20" alignment="left" text="(=・ω・=)" minimumScaleFactor="0.01" id="v44-YZ-VS1" customClass="Account"/>
+                                        <group width="1" alignment="left" id="7ja-oa-mFQ">
+                                            <items>
+                                                <label width="0.5" alignment="left" text="B 0" minimumScaleFactor="0.01" id="rBG-U8-c2N">
+                                                    <color key="textColor" red="0.99607843137254903" green="0.8901960784313725" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label width="0.5" alignment="left" text="币 0" minimumScaleFactor="0.01" id="1Tz-PL-m2r">
+                                                    <color key="textColor" red="0.0" green="0.63137254901960782" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <separator width="0.01" alignment="left" id="2GB-LZ-9bX">
+                            <color key="color" red="0.98431372549999996" green="0.44705882349999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <group width="1" alignment="left" id="bpd-y2-OQW">
+                            <items>
+                                <label width="0.40000000000000002" alignment="left" text="LV0" minimumScaleFactor="0.80000000000000004" id="8QD-mC-u89"/>
+                                <label width="0.26000000000000001" alignment="right" text="0" textAlignment="right" minimumScaleFactor="0.01" id="aNg-gE-RO1"/>
+                                <label width="0.080000000000000002" alignment="right" text="/" textAlignment="center" minimumScaleFactor="0.80000000000000004" id="dBV-6v-bl6"/>
+                                <label width="0.26000000000000001" alignment="right" text="0" textAlignment="left" minimumScaleFactor="0.01" id="emD-Hs-odG"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="bCoinLabel" destination="rBG-U8-c2N" id="IKA-i5-YUX"/>
+                        <outlet property="coinLabel" destination="1Tz-PL-m2r" id="CKe-bQ-lXy"/>
+                        <outlet property="face" destination="Ffj-ZC-oc7" id="2ps-92-gRT"/>
+                        <outlet property="levelCurrentLabel" destination="aNg-gE-RO1" id="18N-l3-Ox9"/>
+                        <outlet property="levelLabel" destination="8QD-mC-u89" id="kTh-q0-U7a"/>
+                        <outlet property="levelNextLabel" destination="emD-Hs-odG" id="NOx-Yd-GLP"/>
+                        <outlet property="levelProgressBar" destination="2GB-LZ-9bX" id="bDz-jE-ekr"/>
+                        <outlet property="uname" destination="v44-YZ-VS1" id="XS1-G3-T4k"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="453" y="357"/>
         </scene>
         <!--VideoPlayController-->
         <scene sceneID="Fta-sI-Y32">
@@ -94,4 +150,5 @@
             <point key="canvasLocation" x="454" y="772"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.98431372549019602" green="0.44705882352941173" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
 </document>
