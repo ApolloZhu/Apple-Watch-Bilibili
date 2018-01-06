@@ -4,6 +4,8 @@
 
 ## 开发中
 
+[![codebeat badge](https://codebeat.co/badges/f418c6a0-3faa-450c-b3d0-2d68a6f4c5cb)](https://codebeat.co/projects/github-com-apollozhu-apple-watch-bilibili-master) [![BCH compliance](https://bettercodehub.com/edge/badge/ApolloZhu/Apple-Watch-Bilibili?branch=master)](https://bettercodehub.com/)
+
 [报 Bug/功能建议/吐槽 传送门](https://github.com/ApolloZhu/Apple-Watch-Bilibili/issues/new)
 
 ## 功能计划
@@ -13,7 +15,6 @@
     - [ ] **链接抓取**（[you-get, MIT](https://github.com/soimort/you-get/blob/develop/src/you_get/extractors/bilibili.py)）
     - [ ] 历史记录
     - [ ] 离线缓存？
-  - [ ] 图标
   - [ ] 番剧
   - [ ] 纯音乐
   - [ ] 专栏

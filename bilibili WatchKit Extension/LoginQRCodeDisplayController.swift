@@ -34,8 +34,8 @@ class LoginQRCodeDisplayController: WKInterfaceController, Named {
         DispatchQueue.global(qos: .userInteractive).async {
             [size = contentFrame.size] in
             guard let qrcode = QRCode(info.url, size: size,
-                                      colorDark: 0xFFFFFF, colorLight: 0),
-                let image = qrcode.image else { return }
+                                      colorDark: 0xFFFFFF, colorLight: 0)
+                , let image = qrcode.image else { return }
             DispatchQueue.main.async { [weak self] in
                 guard let imageView = self?.imageView else { return }
                 self?.waitingIndicator?.setHidden(true)

@@ -8,8 +8,6 @@
 
 import BilibiliKit
 
-// Alternate: https://api.bilibili.com/x/web-interface/nav
-
 public struct BKAccount: Codable {
     public let level_info: LevelInfo
     public let bCoins: Double
@@ -32,6 +30,7 @@ public struct BKAccount: Codable {
 }
 
 extension BKAccount {
+    // Alternate: https://api.bilibili.com/x/web-interface/nav
     static let url: URL = "https://account.bilibili.com/home/userInfo"
     static func getCurrent(_ handler: @escaping (BKAccount?) -> Void) {
         struct Wrapper: Codable {
