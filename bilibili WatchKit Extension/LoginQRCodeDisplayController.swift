@@ -22,14 +22,16 @@ class LoginQRCodeDisplayController: WKInterfaceController, Named {
     public static let name = "LoginViewController"
     @IBOutlet private var imageView: WKInterfaceImage!
     @IBOutlet private var waitingIndicator: WKInterfaceImage!
-
-    private func login() {
-        imageView?.setImage(nil)
-        becomeCurrentPage()
+    private var isLoginInProcess = false
+    
+    private func login(anyways: Bool = false) {
+        guard anyways || !isLoginInProcess else { return }
+        isLoginInProcess = true
+        imageView?.setImageNamed("Akari")
         BKLoginHelper.default.login(handleLoginInfo: handleLoginInfo,
                                     handleLoginState: handleLoginState)
     }
-
+    
     private func handleLoginInfo(_ info: BKLoginHelper.LoginURL) {
         DispatchQueue.global(qos: .userInteractive).async {
             [size = contentFrame.size] in
@@ -44,7 +46,7 @@ class LoginQRCodeDisplayController: WKInterfaceController, Named {
             }
         }
     }
-
+    
     private func handleLoginState(_ state: BKLoginHelper.LoginState) {
         DispatchQueue.main.async { [weak self] in
             guard let `self` = self else { return }
@@ -56,9 +58,10 @@ class LoginQRCodeDisplayController: WKInterfaceController, Named {
                 self.waitingIndicator.setHidden(false)
                 self.imageView.setHidden(true)
             case .succeeded: self.loggedIn()
-            case .expired: self.login()
+            case .expired: self.login(anyways: true)
             case .errored:
-                let yes = WKAlertAction(title: "OK", style: .default) { [weak self] in self?.login() }
+                let yes = WKAlertAction(title: "OK", style: .default)
+                { [weak self] in self?.login(anyways: true) }
                 let no = WKAlertAction(title: "No", style: .destructive) { exit(0) }
                 self.presentAlert(withTitle: "Oops", message: "Something went wrong. Try again?", preferredStyle: .sideBySideButtonsAlert, actions: [no, yes])
             case .missingOAuthKey:
@@ -72,19 +75,17 @@ class LoginQRCodeDisplayController: WKInterfaceController, Named {
     }
     
     private func loggedIn() {
+        isLoginInProcess = false
+        WKExtension.shared().isAutorotating = false
+        WKExtension.shared().isFrontmostTimeoutExtended = false
         presentNormalInterface()
     }
-
+    
     override func willActivate() {
         super.willActivate()
         if BKSession.shared.isLoggedIn { return loggedIn() }
         WKExtension.shared().isAutorotating = true
         WKExtension.shared().isFrontmostTimeoutExtended = true
         login()
-    }
-
-    override func didDeactivate() {
-        WKExtension.shared().isAutorotating = false
-        WKExtension.shared().isFrontmostTimeoutExtended = false
     }
 }
