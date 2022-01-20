@@ -18,9 +18,9 @@ extension WKInterfaceController {
 
 class InterfaceController: WKInterfaceController, Named {
     public static let name = "MainViewController"
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
         // Configure interface objects here.
     }
     
@@ -28,12 +28,10 @@ class InterfaceController: WKInterfaceController, Named {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         presentLoginControllerIfNeeded()
-        
     }
     
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-    
 }

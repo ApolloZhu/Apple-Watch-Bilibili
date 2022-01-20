@@ -22,11 +22,14 @@ class AccountInterfaceController: WKInterfaceController, Named {
     
     private var account: BKAccount? {
         didSet {
-            guard let account = account else { return dismiss() }
+            guard let account = account else {
+                DispatchQueue.main.async(execute: dismiss)
+                return
+            }
             if oldValue?.face != account.face {
-                if let url = URL(string: account.face)?.inHttps {
-                    let task = URLSession.shared.dataTask(with: url)
-                    { [weak self] data,_,_ in
+                if let url = URL(string: account.face)?.inHTTPS {
+                    let task = URLSession.shared.dataTask(with: url) {
+                        [weak self] (data, _, _) in
                         if let data = data {
                             self?.face?.setImageData(data)
                         }
@@ -37,11 +40,12 @@ class AccountInterfaceController: WKInterfaceController, Named {
             if oldValue?.uname != account.uname {
                 uname.setText(account.uname)
             }
-            if oldValue?.bCoins != account.bCoins {
-                bCoinLabel.setText("B \(account.bCoins)")
+            if oldValue?.wallet != account.wallet {
+                let wallet = account.wallet
+                bCoinLabel.setText("B \(wallet.bcoin_balance + wallet.coupon_balance)")
             }
-            if oldValue?.coins != account.coins {
-                coinLabel.setText("币 \(account.coins)")
+            if oldValue?.money != account.money {
+                coinLabel.setText("币 \(account.money)")
             }
             
             let oldInfo = oldValue?.level_info
@@ -51,16 +55,20 @@ class AccountInterfaceController: WKInterfaceController, Named {
                 levelLabel.setText("LV\(info.current_level)")
             }
             
-            let total = CGFloat(max(info.next_exp, 1))
+            let total: CGFloat
+            switch info.next_exp {
+            case .left(let nextExp):
+                levelNextLabel.setText("\(nextExp)")
+                total = CGFloat(max(nextExp, 1))
+            case .right(let string):
+                levelNextLabel.setText(string)
+                total = 1
+            }
             
             if oldInfo?.current_exp != info.current_exp {
                 let width = CGFloat(info.current_exp) / total
                 levelProgressBar.setRelativeWidth(width, withAdjustment: 0)
                 levelCurrentLabel.setText("\(info.current_exp)")
-            }
-            
-            if oldInfo?.next_exp != info.next_exp {
-                levelNextLabel.setText("\(info.next_exp)")
             }
         }
     }
@@ -68,7 +76,12 @@ class AccountInterfaceController: WKInterfaceController, Named {
     override func willActivate() {
         super.willActivate()
         BKAccount.getCurrent { [weak self] in
-            self?.account = $0
+            switch $0 {
+            case .success(let account):
+                self?.account = account
+            case .failure(let error):
+                print(error)
+            }
         }
     }
     

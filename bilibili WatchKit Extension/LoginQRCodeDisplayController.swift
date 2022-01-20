@@ -8,12 +8,15 @@
 
 import UIKit
 import WatchKit
-import swift_qrcodejs
+import EFQRCode
 import BilibiliKit
 
 extension WKInterfaceController {
     func presentLoginControllerIfNeeded() {
-        if BKSession.shared.isLoggedIn { return }
+        if BKSession.shared.isLoggedIn {
+            // FIXME: present the account info view for now
+            return presentNormalInterface()
+        }
         WKInterfaceController.reloadRootPageControllers(withNames: [LoginQRCodeDisplayController.name], contexts: nil, orientation: .horizontal, pageIndex: 0)
     }
 }
@@ -28,26 +31,27 @@ class LoginQRCodeDisplayController: WKInterfaceController, Named {
         guard anyways || !isLoginInProcess else { return }
         isLoginInProcess = true
         imageView?.setImageNamed("Akari")
-        BKLoginHelper.default.login(handleLoginInfo: handleLoginInfo,
-                                    handleLoginState: handleLoginState)
+        
+        BKSession.shared.login(handleLoginInfo: handleLoginInfo,
+                               handleLoginState: handleLoginState)
     }
     
-    private func handleLoginInfo(_ info: BKLoginHelper.LoginURL) {
+    private func handleLoginInfo(_ info: BKSession.QRCodeLoginHelper.LoginURL) {
         DispatchQueue.global(qos: .userInteractive).async {
-            [size = contentFrame.size] in
-            guard let qrcode = QRCode(info.url, size: size,
-                                      colorDark: 0xFFFFFF, colorLight: 0)
-                , let image = qrcode.image else { return }
+            guard let image = EFQRCode.generate(for: info.url,
+                                                backgroundColor: .white()!,
+                                                foregroundColor: .black()!)
+            else { return }
             DispatchQueue.main.async { [weak self] in
                 guard let imageView = self?.imageView else { return }
                 self?.waitingIndicator?.setHidden(true)
-                imageView.setImage(image)
+                imageView.setImage(UIImage(cgImage: image))
                 imageView.setHidden(false)
             }
         }
     }
     
-    private func handleLoginState(_ state: BKLoginHelper.LoginState) {
+    private func handleLoginState(_ state: BKSession.QRCodeLoginHelper.LoginState) {
         DispatchQueue.main.async { [weak self] in
             guard let `self` = self else { return }
             switch state {
@@ -77,7 +81,11 @@ class LoginQRCodeDisplayController: WKInterfaceController, Named {
     private func loggedIn() {
         isLoginInProcess = false
         WKExtension.shared().isAutorotating = false
-        WKExtension.shared().isFrontmostTimeoutExtended = false
+        if #available(watchOS 7.0, *) {
+            // user configurable
+        } else {
+            WKExtension.shared().isFrontmostTimeoutExtended = false
+        }
         presentNormalInterface()
     }
     
@@ -85,7 +93,11 @@ class LoginQRCodeDisplayController: WKInterfaceController, Named {
         super.willActivate()
         if BKSession.shared.isLoggedIn { return loggedIn() }
         WKExtension.shared().isAutorotating = true
-        WKExtension.shared().isFrontmostTimeoutExtended = true
+        if #available(watchOS 7.0, *) {
+            // user configurable
+        } else {
+            WKExtension.shared().isFrontmostTimeoutExtended = true
+        }
         login()
     }
 }

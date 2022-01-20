@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
     </dependencies>
     <scenes>
         <!--Bili-->
@@ -23,7 +21,7 @@
         <!--LoginViewController-->
         <scene sceneID="7PC-57-Qxf">
             <objects>
-                <controller identifier="LoginViewController" contentMode="scaleAspectFill" fullScreen="YES" id="9V5-Mt-h40" customClass="LoginQRCodeDisplayController" customModule="bilibili_WatchKit_Extension">
+                <controller identifier="LoginViewController" contentMode="scaleAspectFill" fullBounds="YES" fullScreen="YES" id="9V5-Mt-h40" customClass="LoginQRCodeDisplayController" customModule="bilibili_WatchKit_Extension">
                     <items>
                         <imageView width="1" height="1" alignment="center" verticalAlignment="center" semanticContentAttribute="playback" image="Akari" contentMode="scaleAspectFit" id="riE-s6-95A"/>
                         <imageView width="1" height="1" alignment="center" verticalAlignment="center" hidden="YES" contentMode="scaleAspectFit" initiallyAnimated="NO" animationDuration="1300" id="Wwc-Eu-kfW"/>
@@ -61,15 +59,15 @@
         <!--AccountController-->
         <scene sceneID="hiL-DV-v4P">
             <objects>
-                <controller identifier="AccountController" id="JEe-Xz-GDC" customClass="AccountInterfaceController" customModule="bilibili_WatchKit_Extension">
+                <controller identifier="AccountController" fullBounds="YES" id="JEe-Xz-GDC" customClass="AccountInterfaceController" customModule="bilibili_WatchKit_Extension">
                     <items>
-                        <button width="1" alignment="left" verticalAlignment="bottom" title="Logout" id="FIB-3b-d7i">
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Logout" id="FIB-3b-d7i">
                             <color key="titleColor" red="0.98431372549999996" green="0.44705882349999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="logout" destination="JEe-Xz-GDC" id="Dma-hO-dFr"/>
                             </connections>
                         </button>
-                        <group width="1" height="0.29999999999999999" alignment="left" spacing="4" id="X3J-uX-dqM">
+                        <group width="1" height="0.29999999999999999" alignment="left" radius="0.0" spacing="4" id="X3J-uX-dqM">
                             <items>
                                 <imageView width="0.29999999999999999" height="1" alignment="left" image="Akari" contentMode="scaleAspectFit" id="Ffj-ZC-oc7"/>
                                 <group width="0.69999999999999996" alignment="left" layout="vertical" id="3YP-lu-m7t">
@@ -151,4 +149,7 @@
         </scene>
     </scenes>
     <color key="tintColor" red="0.98431372549019602" green="0.44705882352941173" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+    <resources>
+        <image name="Akari" width="213" height="213"/>
+    </resources>
 </document>
