@@ -20,7 +20,7 @@ public struct BKAccount: Codable {
     
     public struct Wallet: Codable, Equatable {
         let bcoin_balance: Int
-        let coupon_balance: Int
+        // let coupon_balance: Int
     }
     public struct LevelInfo: Codable {
         public let current_level: Int

@@ -42,7 +42,7 @@ class AccountInterfaceController: WKInterfaceController, Named {
             }
             if oldValue?.wallet != account.wallet {
                 let wallet = account.wallet
-                bCoinLabel.setText("B \(wallet.bcoin_balance + wallet.coupon_balance)")
+                bCoinLabel.setText("B \(wallet.bcoin_balance)")
             }
             if oldValue?.money != account.money {
                 coinLabel.setText("币 \(account.money)")
